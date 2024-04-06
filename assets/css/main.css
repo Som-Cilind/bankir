@@ -1,0 +1,106 @@
+.main-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/background-main.jpg");
+  background-size: cover;
+}
+
+.settings-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 15;
+}
+
+.settings-icon:hover {
+  transform: rotate(180deg);
+}
+
+.settings-icon:active {
+  transform: rotate(180deg) scale(0.9);
+}
+
+.btn-rules {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* settings */
+.modal-settings {
+  display: none;
+  width: 900px;
+  height: 400px;
+  background-color: #eee7c2;
+  /* opacity: 0.9; */
+  border: 1px solid black;
+  position: absolute;
+  top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 30px;
+  border-radius: 70px;
+  z-index: 20;
+}
+
+.modal-settings__setting-block {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* переключатель */
+
+.music-switch {
+  width: 54px;
+  height: 30px;
+  border: 2px solid rgb(21, 67, 167);
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.switcher {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  background-color: rgb(21, 67, 167);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+#switch {
+  display: none;
+}
+
+#switch:checked~.switcher {
+  left: 27px;
+  background-color: black;
+}
+
+/* dark */
+
+.brightnes-block {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  pointer-events: none;
+}

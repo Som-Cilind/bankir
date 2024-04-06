@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/createRoom.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+  </head>
+  <body class="create-room">
+    <main class="create-room__create">
+      <div class="create-room__create-input create-name">
+        <h2>Название комнаты:</h2>
+        <input type="text" placeholder="комната 1" />
+      </div>
+
+      <div class="create-room__create-input create-type">
+        <h2>Тип комнаты:</h2>
+
+        <div class="create-type__type-block">
+          <img src="./assets/images/icons/zamok_open.svg" alt="" />
+          <img src="./assets/images/icons/zamok_close.svg" alt="" />
+        </div>
+      </div>
+      <div class="create-room__create-input create-pass">
+        <h2>Пароль:</h2>
+        <input type="text" placeholder="пароль" />
+      </div>
+      <div class="create-room__create-input create-code">
+        <h2>Код:</h2>
+        <h2 class="create-code__code">543223</h2>
+      </div>
+      <button class="btn-create-room">Создать</button>
+    </main>
+    <!-- <input
+      type="range"
+      min="0"
+      max="100"
+      step="1"
+      oninput="console.log(this.value)"
+    /> -->
+  </body>
+</html>

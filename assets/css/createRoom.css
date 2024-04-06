@@ -1,0 +1,63 @@
+.create-room {
+    background-image: url("../images/backgroundInside.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.create-room__create {
+    width: 100%;
+    max-width: 785px;
+    border-radius: 12px;
+    border: 1px solid #000;
+    background: rgba(146, 59, 59, 0.80);
+    height: 584px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.create-room__create-input {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    color: rgb(226, 226, 226);
+}
+
+.create-room__create-input input {
+    border: none;
+    border-bottom: 2px solid #0AB6FF;
+    padding: 5px 8px;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+}
+
+.create-room__create-input input::placeholder {
+    color: white;
+}
+
+.create-name {}
+
+.create-type {}
+
+.create-type__type-block {}
+
+.create-pass {}
+
+.create-code {}
+
+.create-code__code {
+    letter-spacing: 4px;
+}
+
+.btn-create-room {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+}

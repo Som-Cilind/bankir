@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="./assets/js/modal.js"></script>
+  </head>
+  <body>
+    <img
+      src="./assets/images/icons/settings.svg"
+      alt=""
+      class="settings-icon"
+      id="settings-btn"
+    />
+    <main class="main-page">
+      <button class="main-page__join">Присоединиться</button>
+      <button class="main-page__create-room">Создать Комнату</button>
+    </main>
+    <button class="btn-rules">Правила</button>
+
+    <div class="modal-settings">
+      <h2>Настройки</h2>
+      <div class="modal-settings__setting-block">
+        <h3>Звук</h3>
+        <h3 id="volume-percent">50%</h3>
+        <input type="range" id="volume" />
+
+        <label for="switch" class="music-switch">
+          <input type="checkbox" id="switch" />
+          <div class="switcher"></div>
+        </label>
+      </div>
+      <div class="modal-settings__setting-block">
+        <h3>Яркость</h3>
+        <input
+          type="range"
+          value="90"
+          id="brightnes"
+          min="10"
+          max="100"
+          step="5"
+        />
+      </div>
+    </div>
+    <div class="brightnes-block"></div>
+    <audio id="music" src="./assets/music/music.mp3"></audio>
+  </body>
+</html>
