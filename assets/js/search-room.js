@@ -17,6 +17,12 @@ let searchRooms = [
         people: 2,
         isOpen: false
     },
+    {
+        nameRoom: "Puba",
+        password: "123",
+        people: 2,
+        isOpen: false
+    },
 ]
 
 let searchList = document.querySelector(".search-room__main-list")

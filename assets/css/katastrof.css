@@ -1,0 +1,28 @@
+.katastrof-page{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.mane{
+    width: 500px;
+    background-color: rgba(64, 55, 55, 0.849);
+    padding: 40px;
+    border-radius: 15.6px;
+    display: flex;
+    flex-direction: column;
+}
+.katastrof-text{
+    font-size: 25px;
+    color: azure;
+font-weight: 500;
+}
+.katastrof-title{
+    color: azure;
+font-weight: 400;
+}
+.timer{
+    color: azure;
+    font-weight: 400;
+}
