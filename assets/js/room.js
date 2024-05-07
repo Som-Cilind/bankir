@@ -7,12 +7,14 @@ import { namesMas } from "./Mas-js/names.js";
 
 import { diseaseMas } from "./Mas-js/disease.js";
 
+import { baggageMas } from "./Mas-js/bagage.js";
+
 import { hobbyMas } from "./Mas-js/hobby.js";
 import { fobosMas } from "./Mas-js/fobos.js";
 import { abilityMas } from "./Mas-js/ability.js";
 
 function random(min=0, max=199) {
-  return Math.floor(Math.random() * (max-min+1) + min)
+  return Math.floor(Math.random() * (max-min) + min)
 
 }
 
@@ -63,48 +65,49 @@ class Player{
 }
 
 
-// let player_1 = new Player(
-//   "Папой", "Папо0оооой", 52, "немой", "гольф", "народ", "микрофон", "красивый"
-// )
-// let player_2 = new Player(
-//   "Бобр", "Землекоп", 15, "котузия", "есть коренья", "киянки", "запасные зубы", "пухлый"
-// )
-// let player_3 = new Player(
-//   "Папой1", "Диктатор2", 522, "немой2", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-// let player_4 = new Player(
-//   "Папой1", "Диктатор3", 522, "немой3", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-// let player_5 = new Player(
-//   "Папой1", "Диктатор4", 522, "немой4", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-// let player_6 = new Player(
-//   "Папой1", "Диктатор5", 522, "немой5", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-// let player_7 = new Player(
-//   "Папой1", "Диктатор6", 522, "немой6", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-// let player_8 = new Player(
-//   "Папой1", "Диктатор7", 522, "немой7", "гольф2", "народ2", "микрофон2", "красивый2"
-// )
-
 
 let playersMas = []
 
 for (let i = 0; i < 8; i++) {
   let name = namesMas[random(0,namesMas.length)]
-  let prof = professionMas[random(0,professionMas.length)]
-  let disease = diseaseMas[random(0,diseaseMas.length)]
-  let workExp = random(0, 80)
   let age = random(0, 100)
-  let hobby = hobbyMas[random(0,hobbyMas.length)]
-  let fobos = fobosMas[random(0,fobosMas.length)]
-  let ability = abilityMas[random(0,abilityMas.length)]
+  let prof = null
+  let fobos = null
+let ability = null
+  let workExp = null
+  let hobby = null
+  let baggage = null
+  let disease = null
+  if (age<20) {
+    prof = "безработный"
+    workExp = "нет"
+  } else {
+    prof = professionMas[random(0,professionMas.length)]
+    workExp = age-random(20,age)
+  }
+if (age<5) {
+  fobos = fobosMas[random(0,fobosMas.length)]
+
+} else {
+fobos = fobosMas[random(0,fobosMas.length)]
+}
+
+if (age<15) {
+  hobby = "нет"
+  ability = "нет"
+disease = "нет"
+baggage= "нет"
+} else {
+  hobby = hobbyMas[random(0,hobbyMas.length)]
+baggage = baggageMas[random(0, baggageMas.length)]
+ability = abilityMas[random(0,abilityMas.length)]
+disease = diseaseMas[random(0,diseaseMas.length)]
+
+}
   
 playersMas.push( new Player(
-  name, age, prof, workExp, disease, hobby, fobos,"ничего нет в карманцах", ability  
+  name, age, prof, workExp, disease, hobby, fobos, baggage, ability  
 ) )
-
 }
 
 
@@ -198,4 +201,3 @@ players.forEach((player,i) => {
     `
   }
 });
-
