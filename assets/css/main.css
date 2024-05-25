@@ -28,10 +28,38 @@
 }
 
 .btn-rules {
+  padding: 20px;
+  background-color: rgb(21, 52, 99);
+  border-radius: 30px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 60px;
+  right: 60px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+/* animation-name: anim_name;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 5;
+animation-direction: alternate-reverse; */
+
 }
+
+.btn-rules:hover{
+  transform: scale(110%);
+  
+}
+
+
+@keyframes anim_name {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* settings */
 .modal-settings {
